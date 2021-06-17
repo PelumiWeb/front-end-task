@@ -28,7 +28,7 @@ function Pagination({totalPost, postsPerPage, paginate, next, previous}) {
                         {pageNumber}
                     </PaginationSpan>
                 ))}
-                {pageNumber != pageNumbers.length -1 ? '' : <ArrowForwardIcon onClick={() => {
+                {pageNumber !== pageNumbers.length -1 ? '' : <ArrowForwardIcon onClick={() => {
                 setPageNumber(prev => prev + 1)
                 next()
             } }/>}
