@@ -55,13 +55,18 @@ outline: none;
 font-size: 1.2rem;
 @media (max-width: 500px){
     width: 100%;
+    font-size: .7rem;
 }
 `
 const HomeIcon = styled(Home)`
 width: 3rem !important;
 height: 3rem !important;
 color: gray;
-cursor: pointer
+cursor: pointer;
+@media (max-width: 500px){
+    width: 2.5rem !important;
+    height: 2.5rem !important
+}
 `
 
 const SearchIcon = styled(Search)`
@@ -76,6 +81,11 @@ const AvatarIcon = styled(Avatar)`
 cursor: pointer;
 width: 3rem !important;
 height: 3rem!important;
+@media (max-width: 500px){
+    width: 2.5rem !important;
+    height: 2.5rem!important;
+    margin-right: 10px;
+}
 `
 
 
