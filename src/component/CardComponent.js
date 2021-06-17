@@ -32,8 +32,8 @@ height: 20rem;
 `
 
 const Card = styled.div`
-width: 20rem;
-height: 35rem;
+width: 17rem;
+height: 31rem;
 margin: 15px;
 border-radius: 10px;
 background-color: #FFFFFF;
@@ -71,8 +71,7 @@ const Description = styled.p`
 padding: 0 5px;
 padding-bottom: 20px;
 text-transform: capitalize;
-
-
+font-size: 0.7rem;
 
 `
 
