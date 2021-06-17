@@ -27,6 +27,10 @@ box-shadow: 0 0 0 1px rgb(63 63 68 / 5%), 0 1px 3px 0 rgb(63 63 68 / 15%);
 display: flex;
 justify-content: space-around;
 align-items: center;
+@media (max-width: 500px){
+    width: 100%;
+}
+
 `
 const InputContainer = styled.div`
 width: 500px;
@@ -35,6 +39,10 @@ display: flex;
 align-items: center;
 border-radius: 10px;
 background-color: whitesmoke;
+@media (max-width: 500px){
+    width: 100%;
+    margin-right: 5px;
+}
 
 
 `
@@ -44,7 +52,10 @@ width: 400px;
 border: none;
 padding: 10px;
 outline: none;
-font-size: 1.2rem
+font-size: 1.2rem;
+@media (max-width: 500px){
+    width: 100%;
+}
 `
 const HomeIcon = styled(Home)`
 width: 3rem !important;
