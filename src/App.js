@@ -11,6 +11,7 @@ function App() {
   const [searchProducts, setSearchProduct] = useState(null)
   const [loading, setLoading] = useState(false)
   const [currentPage, setCurrentPage] = useState(1)
+  const [reqFailed, setReqFailed] = useState(false)
   const [postsPerPage] = useState(10)
 
   const indexOfLastPost = currentPage * postsPerPage
@@ -20,9 +21,13 @@ function App() {
   useEffect(() => {
     const getData = async () => {
       setLoading(true)
+      try {
        const req = await axios.get("/products")
-       setLoading(false)
        setData(req.data)
+      }catch(e) {
+        setReqFailed(true)
+      }
+       setLoading(false)
     }
     getData()
   }, [])
@@ -72,10 +77,22 @@ function App() {
  )
 
 
+ const showContents = () => {
+   if (loading) {
+    return Loading() 
+   } else if (reqFailed) {
+      return <p>Couldn't fetch the data</p>
+   } else {
+    return Cards()
+   }
+  }
+    
+
+
   return (
     <AppWrapper>
       <Header setSearchProduct={setSearchProduct} searchProducts={searchProducts} />
-      {loading ? Loading() : Cards()}
+      {showContents()}
       <Pagination postsPerPage={postsPerPage} totalPost={data.length} paginate={paginate} next={next} previous={previous}/>
     </AppWrapper>
   );
@@ -96,7 +113,7 @@ flex-wrap: wrap;
 ` 
 
 const LoaderWrapper = styled.div`
-margin-top: 50px;
 display: grid;
 place-items: center;
+height: 100vh
 `

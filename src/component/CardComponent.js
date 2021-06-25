@@ -29,6 +29,8 @@ export default CardComponent
 const ImageContainer = styled.div`
 width: 100%;
 height: 20rem;
+transition: all .3s;
+
 `
 
 const Card = styled.div`
@@ -38,7 +40,6 @@ margin: 15px;
 border-radius: 10px;
 background-color: #FFFFFF;
 box-shadow: 0 0 0 1px rgb(63 63 68 / 5%), 0 1px 3px 0 rgb(63 63 68 / 15%);
-transition: all .3s;
 &:hover ${ImageContainer} {
 transform: scale(1.02);
 }
@@ -53,6 +54,7 @@ const Image = styled.img`
 height: 100%;
 object-fit: cover;
 width: 100%;
+
 
 `
 const Details = styled.div`

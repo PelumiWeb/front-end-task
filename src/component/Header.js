@@ -25,7 +25,7 @@ height: 100px;
 background-color: white;
 box-shadow: 0 0 0 1px rgb(63 63 68 / 5%), 0 1px 3px 0 rgb(63 63 68 / 15%);
 display: flex;
-justify-content: space-around;
+justify-content: space-between;
 align-items: center;
 @media (max-width: 500px){
     width: 100%;
@@ -33,7 +33,7 @@ align-items: center;
 
 `
 const InputContainer = styled.div`
-width: 500px;
+/* width: 500px; */
 padding: 10px;
 display: flex;
 align-items: center;
@@ -64,8 +64,8 @@ height: 3rem !important;
 color: gray;
 cursor: pointer;
 @media (max-width: 500px){
-    width: 2.5rem !important;
-    height: 2.5rem !important
+    width: 2rem !important;
+    height: 2rem !important
 }
 `
 
@@ -82,8 +82,8 @@ cursor: pointer;
 width: 3rem !important;
 height: 3rem!important;
 @media (max-width: 500px){
-    width: 2.5rem !important;
-    height: 2.5rem!important;
+    width: 2rem !important;
+    height: 2rem!important;
     margin-right: 10px;
 }
 `
